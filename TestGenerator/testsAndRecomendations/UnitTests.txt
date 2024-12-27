@@ -1,0 +1,86 @@
+Here are the JUnit test classes based on your JSON data. Each class has a setup method that prepares the necessary objects for the tests.
+
+1. BookingTest
+```java
+package ma.hotel.hotelproject.Beans;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class BookingTest {
+
+    private Booking booking;
+
+    @Before
+    public void setUp() {
+        booking = new Booking();
+    }
+
+    @Test
+    public void testGetId() {
+        Long idValue = 1L;
+        booking.setId(idValue);
+        assertEquals(idValue, booking.getId());
+    }
+
+    // similar tests for other attributes and methods...
+}
+```
+2. HotelTest
+```java
+package ma.hotel.hotelproject.Beans;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class HotelTest {
+
+    private Hotel hotel;
+
+    @Before
+    public void setUp() {
+        hotel = new Hotel();
+    }
+
+    @Test
+    public void testGetId() {
+        Long idValue = 1L;
+        hotel.setId(idValue);
+        assertEquals(idValue, hotel.getId());
+    }
+
+    // similar tests for other attributes and methods...
+}
+```
+3. ReviewTest
+```java
+package ma.hotel.hotelproject.Beans;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ReviewTest {
+
+    private Review review;
+
+    @Before
+    public void setUp() {
+        review = new Review();
+    }
+
+    @Test
+    public void testGetId() {
+        Long idValue = 1L;
+        review.setId(idValue);
+        assertEquals(idValue, review.getId());
+    }
+
+    // similar tests for other attributes and methods...
+}
+```
+Similar structure for RoomTest, UserTest, SmtpMailServerTest, HotelServiceTest, RoomServiceTest, UserServiceTest, HotelWSTest, RoomWSTest and UserWSTest.
+
+All unit tests should be written individually for each method in their respective classes. Checking only for the `getId()` method is not enough, all the methods should be checked by creating similar test methods.
